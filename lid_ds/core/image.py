@@ -8,6 +8,9 @@ class StdinCommand:
     command: str
     name: str = "attack"
 
+    def encode(self, *args, **kwargs):
+        return self.command.encode(*args, **kwargs)
+
 
 @dataclass
 class ExecCommand:

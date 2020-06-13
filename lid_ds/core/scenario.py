@@ -115,6 +115,9 @@ class Scenario(metaclass=ABCMeta):
         log.stop()
         self.logging_thread.join()
 
+    def _post_processing(self):
+        pass
+
     def __repr__(self):
         if self.general_meta.is_exploit:
             return '<{} {} recording_time={} warmup_time={} exploit_start_time={}>'.format(
